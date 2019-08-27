@@ -1,0 +1,3 @@
+
+#Intalación de paquetes en R
+install.packages("titanic")
