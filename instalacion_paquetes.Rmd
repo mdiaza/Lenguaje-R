@@ -1,0 +1,74 @@
+---
+title: "Instalación y Carga de Paquetes o Librerías en R"
+output: html_document
+Fecha: "28/08/2019"
+Autor: Merly Mabel Díaz Arias
+
+---
+
+### Instalación de una librería
+##### Por defecto se instala la última versión de la librería
+```{r }
+#install.packages ("foreign")
+```
+
+
+### Instalación de una librería con una versión anterior
+```{r}
+#install_version('dplyr', version = '0.4.0', repos = 'http://cran.us.r-project.org')
+```
+
+
+### Ubicación de instalación de las librerías
+```{r}
+.libPaths()
+```
+
+
+### Instalación de una librería con todas sus dependencias
+```{r }
+#install.packages("car", dependencies = T)
+```
+
+### Guardar las dependencias de la librería de interes
+```{r}
+#install.packages("foreign", destdir = "D:\Usuarios\mdiaza\Desktop")
+```
+
+### Uso de librería en R con library
+```{r}
+library(stringr)
+library(RODBC)
+
+```
+
+
+### Uso de librería en R con require
+```{r}
+require(stringr)
+require(RODBC)
+
+```
+
+
+### Uso de funciones sin cargar una librería
+```{r}
+
+```
+
+
+### Validar previamente si se cuenta con la librería
+```{r echo=TRUE, warning=FALSE}
+if(!require(weatherData)) install.packages("weatherData",repos = "http://cran.us.r-project.org")
+```
+
+### Instalar paquetes desde GitHub
+```{r}
+#install_github('hadley/dplyr')
+```
+
+
+```{r}
+#githubinstall('dplyr')
+```
+
